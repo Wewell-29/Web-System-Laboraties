@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Playlist App</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        #wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        #add-song-form, #search-songs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background-color: #444;
+            color: white;
+        }
+        button {
+            padding: 10px;
+            background-color: #ff4757;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ff6b81;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #444;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .delete {
+            background-color: #ff4757;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        .delete:hover {
+            background-color: #ff6b81;
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrapper">
+    <h1>My Playlist App</h1>
+
+    <!-- Search Box -->
+    <div id="search-songs">
+        <input type="text" id="search-input" placeholder="Search songs...">
+    </div>
+
+    <!-- Add Song Section -->
+    <h2>Add a Song</h2>
+    <form id="add-song-form">
+        <input type="text" id="song-name" placeholder="Enter song title..." required>
+        <input type="text" id="song-artist" placeholder="Enter artist name..." required>
+        <button type="submit">Add Song</button>
+    </form>
+
+    <!-- Song List -->
+    <h2>Playlist</h2>
+    <ul id="song-items">
+        <!-- Sample songs -->
+        <li>
+            <span class="song">Tingin</span><span class="artist">Cup of Joe</span>
+            <button class="delete">Delete</button>
+        </li>
+        <li>
+            <span class="song">Hawak Kamay</span><span class="artist">Yeng Constantino</span>
+            <button class="delete">Delete</button>
+        </li>
+        <li>
+            <span class="song">Enchanted</span><span class="artist">Taylor Swift</span>
+            <button class="delete">Delete</button>
+        </li>
+    </ul>
+</div>
+
+<script src="list.js"></script>
+</body>
+</html>
